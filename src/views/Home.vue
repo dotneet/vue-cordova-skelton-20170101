@@ -1,7 +1,18 @@
 <template>
   <div>
-    <h1 ref="title" class="title">{{ title }}</h1>
-    <button class="button is-primary" @click="onClick">button</button>
+    <div class="header columns">
+      <div class="column is-12">
+        <h1 class="title">ホーム</h1>
+      </div>
+    </div>
+
+    <router-view></router-view>
+
+    <div class="columns">
+      <div class="column is-12">
+        Footer
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,3 +38,17 @@ export default {
 }
 </script>
 
+<style scoped>
+.header {
+  padding: 1rem;
+  background-color: #ccf;
+}
+.header .column {
+  padding: 0;
+  line-height: 28px;
+  vertical-align: middle;
+}
+.title {
+  color: white;
+}
+</style>
